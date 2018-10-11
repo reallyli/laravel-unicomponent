@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://github.styleci.io/repos/152551123"><img src="https://github.styleci.io/repos/152551123/shield?branch=master" alt="StyleCI"></a>
-<img src="https://travis-ci.org/reallyli/laravel-unicomponent.svg?branch=master" alt="Travis-ci" />
+<a href="https://travis-ci.org/reallyli/laravel-unicomponent"><img src="https://travis-ci.org/reallyli/laravel-unicomponent.svg?branch=master" alt="Travis-ci" /></a>
 </p>
 
 
@@ -14,7 +14,14 @@ $ composer require reallyli/laravel-unicomponent -vvv
 
 ## Usage
 
-TODO
+```shell
+$ app('unicomponent')->{componetName}()
+```
+Pre-set Log Formatter
+
+```shell
+$ app('unicomponent')->logFormatter()
+```
 
 ## Contributing
 
