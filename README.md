@@ -1,8 +1,9 @@
 <h1 align="center"> laravel-unicomponent </h1>
 
 <p align="center">
-<a href="https://github.styleci.io/repos/152551123"><img src="https://github.styleci.io/repos/152551123/shield?branch=master" alt="StyleCI"></a>
-<a href="https://travis-ci.org/reallyli/laravel-unicomponent"><img src="https://travis-ci.org/reallyli/laravel-unicomponent.svg?branch=master" alt="Travis-ci" /></a>
+<a href="https://github.styleci.io/repos/152551123"><img src="https://github.styleci.io/repos/152551123/shield?branch=master" alt="StyleCI"></a> 
+<a href="https://travis-ci.org/reallyli/laravel-unicomponent"><img src="https://travis-ci.org/reallyli/laravel-unicomponent.svg?branch=master" alt="TravisCi" /></a> 
+<a href="https://scrutinizer-ci.com/g/reallyli/laravel-unicomponent"><img src="https://scrutinizer-ci.com/g/reallyli/laravel-unicomponent/badges/quality-score.png?b=master" alt="ScrutinizerCi" /></a>
 </p>
 
 
