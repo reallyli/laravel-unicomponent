@@ -1,0 +1,38 @@
+{
+    "name": "reallyli\/laravel-unicomponent",
+    "description": "A laravel component package for uni awesome",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "reallyli",
+            "email": "zlireallyli@outlook.com"
+        }
+    ],
+    "require": {
+        "php" : "^7.0",
+        "illuminate/support": "^5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reallyli\\LaravelUnicomponent\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Reallyli\\LaravelUnicomponent\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reallyli\\LaravelUnicomponent\\UnicomponentServiceProvider"
+            ],
+            "aliases": {
+                "unicomponent": "Reallyli\\Unicomponent\\Facades\\Unicomponent"
+            }
+        }
+    }
+}

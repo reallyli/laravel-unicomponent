@@ -1,0 +1,25 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - alias composer=composer\ --no-interaction && composer selfupdate
+  - composer global require hirak/prestissimo
+
+install:
+  - travis_retry composer update --no-progress --profile --no-scripts --no-suggest --prefer-stable
+
+script:
+   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+notifications:
+  email:
+    - skrphper@gmail.com
+  on_success: change
+  on_failure: always
