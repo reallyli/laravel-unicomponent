@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/11
- * Time: 上午11:28
+ * Time: 上午11:28.
  */
 
 namespace Reallyli\LaravelUnicomponent;
@@ -18,7 +18,7 @@ class UnicomponentServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('unicomponent', function () {
-            return new UnicomponentServiceManager(include_once(__DIR__ . '/UnicomponentConfig.php'));
+            return new UnicomponentServiceManager(include_once(__DIR__.'/UnicomponentConfig.php'));
         });
     }
 
