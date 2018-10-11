@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/11
- * Time: 下午2:47
+ * Time: 下午2:47.
  */
 
 namespace Reallyli\LaravelUnicomponent\Tests\Example;
@@ -13,11 +13,11 @@ use Reallyli\LaravelUnicomponent\UnicomponentServiceInterface;
 class ExampleService implements UnicomponentServiceInterface
 {
     /**
-     * Method description:alias
+     * Method description:alias.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param 
+     * @param
      * @return mixed
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */
@@ -27,11 +27,11 @@ class ExampleService implements UnicomponentServiceInterface
     }
 
     /**
-     * Method description:provider
+     * Method description:provider.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param 
+     * @param
      * @return mixed
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */

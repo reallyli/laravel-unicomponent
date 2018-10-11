@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/11
- * Time: 上午11:22
+ * Time: 上午11:22.
  */
 
 namespace Reallyli\LaravelUnicomponent;

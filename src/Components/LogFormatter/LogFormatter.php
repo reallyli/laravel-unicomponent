@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/10
- * Time: 下午4:45
+ * Time: 下午4:45.
  */
 
 namespace Reallyli\LaravelUnicomponent\Components\LogFormatter;

@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/11
- * Time: 上午10:37
+ * Time: 上午10:37.
  */
 
 namespace Reallyli\LaravelUnicomponent;
@@ -21,7 +21,7 @@ class UnicomponentServiceManager
     private $config;
 
     /**
-     * Method description:__construct
+     * Method description:__construct.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -36,7 +36,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:registerComponent
+     * Method description:registerComponent.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -52,7 +52,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:registerDefaultComponent
+     * Method description:registerDefaultComponent.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -71,7 +71,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:setServiceInstance
+     * Method description:setServiceInstance.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -90,7 +90,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:getServices
+     * Method description:getServices.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -103,7 +103,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:getServiceComponent
+     * Method description:getServiceComponent.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -117,7 +117,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:__call
+     * Method description:__call.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11

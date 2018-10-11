@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: reallyli
  * Date: 18/10/10
- * Time: 下午4:46
+ * Time: 下午4:46.
  */
 
 namespace Reallyli\LaravelUnicomponent\Components\LogFormatter;
@@ -13,7 +13,7 @@ use Monolog\Formatter\JsonFormatter as BaseJsonFormatter;
 class JsonFormatter extends BaseJsonFormatter implements FormatterInterface
 {
     /**
-     * Method description:format
+     * Method description:format.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/10
@@ -34,6 +34,6 @@ class JsonFormatter extends BaseJsonFormatter implements FormatterInterface
             $newRecord = array_merge($newRecord, $record['context']);
         }
 
-        return $this->toJson($this->normalize($newRecord), true) . ($this->appendNewline ? "\n" : '');
+        return $this->toJson($this->normalize($newRecord), true).($this->appendNewline ? "\n" : '');
     }
 }
