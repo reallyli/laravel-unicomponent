@@ -59,7 +59,7 @@ class Pusher
         $response = curl_exec($ch);
 
         if ($response === false) {
-            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:'. $jsonData);
+            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:'.$jsonData);
 
             return false;
         }
