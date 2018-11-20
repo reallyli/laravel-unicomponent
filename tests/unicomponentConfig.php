@@ -7,7 +7,10 @@
  */
 
 return [
-    'component_provider' => [
-       \Reallyli\LaravelUnicomponent\Tests\Example\ExampleService::class,
+    'components' => [
+        'example' => [
+            'provider' => \Reallyli\LaravelUnicomponent\Tests\Example\ExampleService::class,
+            'configs' => []
+        ]
     ],
 ];

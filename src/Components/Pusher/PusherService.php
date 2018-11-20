@@ -6,7 +6,7 @@
  * Time: 上午11:38
  */
 
-namespace Reallyli\LaravelUnicomponent\Components\LogFormatter;
+namespace Reallyli\LaravelUnicomponent\Components\Pusher;
 
 use Reallyli\LaravelUnicomponent\UnicomponentServiceInterface;
 
@@ -19,6 +19,6 @@ class PusherService implements UnicomponentServiceInterface
 
     public function provider()
     {
-        return LogFormatter::class;
+        return Pusher::class;
     }
 }

@@ -29,7 +29,7 @@ return [
         |
         */
         'pusher' => [
-            'provider' => \Reallyli\LaravelUnicomponent\Components\LogFormatter\PusherService::class,
+            'provider' => \Reallyli\LaravelUnicomponent\Components\Pusher\PusherService::class,
             'configs' => [
                 'pusher_url' => env('UNICOMPONENT_PUSHER_URL'),
             ]

@@ -61,7 +61,9 @@ class UnicomponentServiceManager
      */
     public function registerDefaultComponent()
     {
-        throw_unless($this->config, '\Exception', 'Please check if the configuration file is published');
+        if (! $this->config) {
+            return;
+        }
 
         foreach ($this->config['components'] as $component) {
             $this->registerComponent(new $component['provider']);
