@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: uniqueway
  * Date: 2018/11/20
- * Time: 上午11:38
+ * Time: 上午11:38.
  */
 
 namespace Reallyli\LaravelUnicomponent\Components\Pusher;

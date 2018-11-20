@@ -10,7 +10,7 @@ return [
     'components' => [
         'example' => [
             'provider' => \Reallyli\LaravelUnicomponent\Tests\Example\ExampleService::class,
-            'configs' => []
-        ]
+            'configs' => [],
+        ],
     ],
 ];

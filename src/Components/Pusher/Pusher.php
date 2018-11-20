@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: uniqueway
  * Date: 2018/11/20
- * Time: 上午11:39
+ * Time: 上午11:39.
  */
 
 namespace Reallyli\LaravelUnicomponent\Components\Pusher;
@@ -11,7 +11,7 @@ namespace Reallyli\LaravelUnicomponent\Components\Pusher;
 class Pusher
 {
     /**
-     * trigger
+     * trigger.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 2018/11/20
@@ -31,7 +31,7 @@ class Pusher
     }
 
     /**
-     * Send Request
+     * Send Request.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 2018/11/20
@@ -56,8 +56,9 @@ class Pusher
 
         $response = curl_exec($ch);
 
-        if ($response === FALSE) {
-            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:' . json_encode($data));
+        if ($response === false) {
+            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:'.json_encode($data));
+
             return false;
         }
 
@@ -65,7 +66,7 @@ class Pusher
     }
 
     /**
-     * Get Pusher Url
+     * Get Pusher Url.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 2018/11/20
@@ -75,7 +76,7 @@ class Pusher
     {
         $pusherUrl = config('unicomponent.pusher.configs.pusher_url');
 
-        throw_unless(filter_var($pusherUrl, FILTER_VALIDATE_URL), '\Exception','pusher url illegal');
+        throw_unless(filter_var($pusherUrl, FILTER_VALIDATE_URL), '\Exception', 'pusher url illegal');
 
         return $pusherUrl;
     }
