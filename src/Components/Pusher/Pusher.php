@@ -23,7 +23,7 @@ class Pusher
      */
     public function trigger($channels, string $eventName, array $data, array $params = [])
     {
-        $params['channel'] = is_string($channels) ? [$channels] : (array) $channels;
+        $params['channels'] = is_string($channels) ? [$channels] : (array) $channels;
         $params['data'] = $data;
         $params['name'] = $eventName;
 
@@ -41,23 +41,25 @@ class Pusher
      */
     protected function sendRequest(string $url, array $data)
     {
+        $jsonData = json_encode($data);
+
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt(
             $ch,
             CURLOPT_HTTPHEADER,
             [
                 'Content-Type: application/json',
-                'Content-Length: '.strlen($data),
+                'Content-Length: '.strlen($jsonData),
             ]
         );
 
         $response = curl_exec($ch);
 
         if ($response === false) {
-            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:'.json_encode($data));
+            logger()->error('[LaravelUnicomponent] Pusher Send Request Error, data:'. $jsonData);
 
             return false;
         }
@@ -74,7 +76,7 @@ class Pusher
      */
     protected function getPusherUrl()
     {
-        $pusherUrl = config('unicomponent.pusher.configs.pusher_url');
+        $pusherUrl = config('unicomponent.components.pusher.configs.pusher_url');
 
         throw_unless(filter_var($pusherUrl, FILTER_VALIDATE_URL), '\Exception', 'pusher url illegal');
 
