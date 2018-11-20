@@ -18,7 +18,7 @@ return [
         */
         'log_formatter' => [
             'provider' => \Reallyli\LaravelUnicomponent\Components\LogFormatter\LogFormatterService::class,
-            'configs' => []
+            'configs' => [],
         ],
         /*
         |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
             'provider' => \Reallyli\LaravelUnicomponent\Components\Pusher\PusherService::class,
             'configs' => [
                 'pusher_url' => env('UNICOMPONENT_PUSHER_URL'),
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
 ];

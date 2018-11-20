@@ -21,7 +21,7 @@ class UnicomponentServiceManager
     private $config;
 
     /**
-     * Construct
+     * Construct.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
@@ -132,7 +132,7 @@ class UnicomponentServiceManager
     }
 
     /**
-     * Method description:__get
+     * Method description:__get.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 2018/11/20

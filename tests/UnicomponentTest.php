@@ -58,7 +58,7 @@ class UnicomponentTest extends TestCase
      */
     public function testGetComponent()
     {
-        $unicompoentConfig = include_once __DIR__ . '/../config/unicomponent.php';
+        $unicompoentConfig = include_once __DIR__.'/../config/unicomponent.php';
 
         $unicomponentServiceManager = new UnicomponentServiceManager($unicompoentConfig);
 
