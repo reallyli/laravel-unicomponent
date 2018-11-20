@@ -16,20 +16,20 @@ class UnicomponentServiceManager
     private $servicesComponents = [];
 
     /**
-     * @var array
+     * @var mixed
      */
     private $config;
 
     /**
-     * Method description:__construct.
+     * Construct.
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param array $config
-     * @return mixed
+     * @param mixed $config
+     * @return void
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */
-    public function __construct(array $config = [])
+    public function __construct($config)
     {
         $this->config = $config;
         $this->registerDefaultComponent();
@@ -65,8 +65,8 @@ class UnicomponentServiceManager
             return;
         }
 
-        foreach ($this->config['component_provider'] as $component) {
-            $this->registerComponent(new $component);
+        foreach ($this->config['components'] as $component) {
+            $this->registerComponent(new $component['provider']);
         }
     }
 
@@ -129,5 +129,18 @@ class UnicomponentServiceManager
     public function __call(string $method, array $parameters)
     {
         return $this->getServiceComponent($method);
+    }
+
+    /**
+     * Method description:__get.
+     *
+     * @author reallyli <zlisreallyli@outlook.com>
+     * @since 2018/11/20
+     * @param string $componentName
+     * @return mixed
+     */
+    public function __get(string $componentName)
+    {
+        return $this->getServiceComponent($componentName);
     }
 }

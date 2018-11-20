@@ -13,12 +13,22 @@ use Illuminate\Support\ServiceProvider;
 class UnicomponentServiceProvider extends ServiceProvider
 {
     /**
+     * Bootstrap the application services.
+     */
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/../config/unicomponent.php' => config_path('unicomponent.php'),
+        ], 'config');
+    }
+
+    /**
      * @return void
      */
     public function register()
     {
-        $this->app->singleton('unicomponent', function () {
-            return new UnicomponentServiceManager(include_once(__DIR__.'/UnicomponentConfig.php'));
+        $this->app->singleton('unicomponent', function ($app) {
+            return new UnicomponentServiceManager($app['config']['unicomponent']);
         });
     }
 

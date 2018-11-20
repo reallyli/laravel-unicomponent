@@ -9,6 +9,7 @@
 namespace Reallyli\LaravelUnicomponent\Tests;
 
 use PHPUnit\Framework\TestCase;
+use Reallyli\LaravelUnicomponent\Components\Pusher\Pusher;
 use Reallyli\LaravelUnicomponent\UnicomponentServiceManager;
 use Reallyli\LaravelUnicomponent\Tests\Example\ExampleService;
 
@@ -19,13 +20,12 @@ class UnicomponentTest extends TestCase
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param
      * @return mixed
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */
     public function testRegisterComponent()
     {
-        $unicomponentServiceManager = new UnicomponentServiceManager();
+        $unicomponentServiceManager = new UnicomponentServiceManager([]);
 
         $unicomponentServiceManager->registerComponent(new ExampleService());
 
@@ -37,7 +37,6 @@ class UnicomponentTest extends TestCase
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param
      * @return mixed
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */
@@ -54,16 +53,15 @@ class UnicomponentTest extends TestCase
      *
      * @author reallyli <zlisreallyli@outlook.com>
      * @since 18/10/11
-     * @param
      * @return mixed
      * 返回值类型：string，array，object，mixed（多种，不确定的），void（无返回值）
      */
     public function testGetComponent()
     {
-        $unicompoentConfig = include_once __DIR__.'/../src/UnicomponentConfig.php';
+        $unicompoentConfig = include_once __DIR__.'/../config/unicomponent.php';
 
         $unicomponentServiceManager = new UnicomponentServiceManager($unicompoentConfig);
 
-        $this->assertEquals(1, is_callable($unicomponentServiceManager->logFormatter()));
+        $this->assertInstanceOf(Pusher::class, $unicomponentServiceManager->pusher);
     }
 }
