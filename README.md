@@ -24,6 +24,18 @@ Pre-set Log Formatter
 $ app('unicomponent')->logFormatter()
 ```
 
+Pusher Instance
+
+```shell
+$ app('unicomponent')->pusher
+```
+
+Pusher Trigger
+
+```shell
+$ app('unicomponent')->pusher->trigger($channels, string $eventName, array $data, array $params = [])
+```
+
 ## Contributing
 
 You can contribute in one of three ways:
