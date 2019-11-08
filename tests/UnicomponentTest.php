@@ -10,8 +10,8 @@ namespace Reallyli\LaravelUnicomponent\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Reallyli\LaravelUnicomponent\Components\Pusher\Pusher;
-use Reallyli\LaravelUnicomponent\UnicomponentServiceManager;
 use Reallyli\LaravelUnicomponent\Tests\Example\ExampleService;
+use Reallyli\LaravelUnicomponent\UnicomponentServiceManager;
 
 class UnicomponentTest extends TestCase
 {
